@@ -1,6 +1,6 @@
 class MyConfiguration(private val configuration: Configuration) : Configuration by configuration {
     override fun toString(): String {
-        return "my-" + super.toString()
+        return super.toString() + "(" + configuration.toString() + ")"
     }
 }
 
