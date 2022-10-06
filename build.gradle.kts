@@ -4,7 +4,7 @@ class MyConfiguration(private val configuration: Configuration) : Configuration 
     }
 }
 
-val baseConfig by configurations.registering
-val extendedConfig by configurations.registering {
-    extendsFrom(MyConfiguration(baseConfig.get()))
+val baseConfig by configurations.creating
+val extendedConfig by configurations.creating {
+    extendsFrom(MyConfiguration(baseConfig))
 }
